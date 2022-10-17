@@ -27,7 +27,6 @@ Comment.init(
     },
     post_id: {
       type: DataTypes.INTEGER,
-      onDelete: 'cascade',
       references: {
         model: 'post',
         key: 'id'
@@ -38,6 +37,7 @@ Comment.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
+    onDelete: 'CASCADE',
     modelName: 'comment'
   }
 );
